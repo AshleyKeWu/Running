@@ -41,7 +41,7 @@ Operation supported includes:
 
 + **GET**: on path localhost:8080/runningInfo
 
-Parameters page and size required. The response are sorted by the health warning level of each record. For example, GET request
+Parameters page and size required. The response are sorted by the health warning level of each record. For example, *GET* request
 
 *localhost:8080/runningInfo/?page=0&size=3*
 
@@ -52,11 +52,11 @@ would return
 
 + **DELETE** (by runningId): on path localhost:8080/runningInfo/{runningId}
 
-For example, DELETE request 
+For example, *DELETE* request 
 
 *localhost:8080/runningInfo/abc*
 
-will delete the record whose runningId is abc. If no such record exists, then no record would be deleted.
+will delete the record whose runningId is "abc". If no such record exists, then no record would be deleted.
 
 ## Built With
 + IntelliJ IDEA
