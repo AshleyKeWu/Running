@@ -37,9 +37,9 @@ Then create a database running_information_analysis_db_prod:
 
 Operation supported includes:
 
-+ POST: on path localhost:8080/runningInfo
++ **POST**: on path localhost:8080/runningInfo
 
-+ GET: on path localhost:8080/runningInfo
++ **GET**: on path localhost:8080/runningInfo
 
 Parameters page and size required. The response are sorted by the health warning level of each record. For example, GET request
 
@@ -49,7 +49,7 @@ would return
 
 ???????????????
 
-+ DELETE (by runningId): on path localhost:8080/runningInfo/{runningId}
++ **DELETE** (by runningId): on path localhost:8080/runningInfo/{runningId}
 
 For example, DELETE request 
 
@@ -61,7 +61,7 @@ will delete the record whose runningId is abc. If no such record exists, then no
 + IntelliJ IDEA
 + Maven
 
-##Author
+## Author
 Ke Wu - *Initial work*
 
 
