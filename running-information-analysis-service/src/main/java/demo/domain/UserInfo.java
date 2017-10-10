@@ -15,10 +15,8 @@ import java.io.Serializable;
 public class UserInfo implements  Serializable{
     @Id
     @GeneratedValue
-    //@OneToMany(targetEntity = RunningInformation.class, cascade = CascadeType.ALL)
     public long userId;
 
-    //@OneToOne(targetEntity = RunningInformation.class)
     public String userName;
     public String address;
 

@@ -1,5 +1,6 @@
 package demo.service;
 
+import demo.domain.RunningInfoDTO;
 import demo.domain.RunningInformation;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -14,8 +15,7 @@ public interface RunningInformationAnalysisService {
     @Transactional
     void deleteByRunningId(String runningId);
 
-    Page<RunningInformation> findAll (Pageable pageable);
+    Page <RunningInformation> findAll (Pageable pageable);
 
-
-
+    Page<RunningInfoDTO> getAll(Pageable pageable);
 }

@@ -1,5 +1,6 @@
 package demo.rest;
 
+import demo.domain.RunningInfoDTO;
 import demo.domain.RunningInformation;
 import demo.service.RunningInformationAnalysisService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,22 +18,27 @@ public class RunningInformationAnalysisRestController {
     @Autowired
     private RunningInformationAnalysisService runningInformationAnalysisService;
 
+    //Upload data
     @RequestMapping(value = "/runningInfo", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     public void upload(@RequestBody List<RunningInformation> runningInformation){
         this.runningInformationAnalysisService.saveRunningInformation(runningInformation);
     }
 
+    //Delete by RunningId
     @RequestMapping(value = "/runningInfo/{runningId}", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.OK)
     public void del_by_id(@PathVariable String runningId){
         this.runningInformationAnalysisService.deleteByRunningId(runningId);
     }
 
+    //Get data, sorted by heartRate
     @RequestMapping(value = "/runningInfo", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
-    public Page<RunningInformation> findAll(@RequestParam(name = "page") int page, @RequestParam(name = "size") int size){
+    public Page<RunningInfoDTO> getAll(@RequestParam(name = "page") int page, @RequestParam(name = "size") int size){
         Sort sort = new Sort(Sort.Direction.DESC, "heartRate");
-        return this.runningInformationAnalysisService.findAll(new PageRequest(page,size, sort));
+        return this.runningInformationAnalysisService.getAll(new PageRequest(page,size, sort));
     }
+
+
 }

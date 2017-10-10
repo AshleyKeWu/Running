@@ -3,6 +3,7 @@ demo/service/impl/RunningInformationAnalysisServiceImpl.class
 demo/RunningInformationAnalysisServiceApplication.class
 demo/rest/RunningInformationAnalysisRestController.class
 demo/service/RunningInformationAnalysisService.class
+demo/domain/RunningInfoDTO.class
 demo/domain/RunningInformation.class
 demo/domain/RunningInformationRepository.class
 demo/domain/RunningInformation$healthWarningLevel.class

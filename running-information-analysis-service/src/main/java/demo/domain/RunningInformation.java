@@ -1,7 +1,6 @@
 package demo.domain;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
@@ -17,13 +16,9 @@ public class RunningInformation {
     @Id
     public final String runningId;
 
-    @JsonIgnore
     private double latitude;
 
-    @JsonIgnore
     private double longitude;
-
-    @JsonIgnore
     private double runningDistance;
     private double totalRunningTime;
     private int heartRate;
@@ -31,16 +26,7 @@ public class RunningInformation {
     public enum healthWarningLevel{
         LOW, NORMAL, HIGH;
     }
-
-    @JsonIgnore
     private String timeStamp;
-
-    /*@Embedded
-    @AttributeOverrides({
-            @AttributeOverride(name = "userName",column = @Column(name = "userName")),
-            @AttributeOverride(name = "address",column = @Column(name = "userAddress")),
-            @AttributeOverride(name = "userId",column = @Column(name = "userId"))
-    })*/
 
     @ManyToOne(targetEntity = UserInfo.class, cascade = CascadeType.ALL)
     private UserInfo userInfo;
@@ -56,7 +42,7 @@ public class RunningInformation {
         this.runningId = runningId;
     }
 
-    /*
+
     public String getUserName(){
         return this.userInfo == null?null:this.userInfo.getUserName();
     }
@@ -68,5 +54,5 @@ public class RunningInformation {
     public long getUserId(){
         return this.userInfo == null?null:this.userInfo.getUserId();
     }
-    */
+
 }
