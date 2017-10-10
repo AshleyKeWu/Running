@@ -1,6 +1,7 @@
 package demo.domain;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
@@ -15,8 +16,14 @@ public class RunningInformation {
 
     @Id
     public final String runningId;
+
+    @JsonIgnore
     private double latitude;
+
+    @JsonIgnore
     private double longitude;
+
+    @JsonIgnore
     private double runningDistance;
     private double totalRunningTime;
     private int heartRate;
@@ -25,15 +32,17 @@ public class RunningInformation {
         LOW, NORMAL, HIGH;
     }
 
+    @JsonIgnore
     private String timeStamp;
 
-    @Embedded
+    /*@Embedded
     @AttributeOverrides({
             @AttributeOverride(name = "userName",column = @Column(name = "userName")),
-            @AttributeOverride(name = "address",column = @Column(name = "address")),
+            @AttributeOverride(name = "address",column = @Column(name = "userAddress")),
             @AttributeOverride(name = "userId",column = @Column(name = "userId"))
-    })
-    //@OneToMany
+    })*/
+
+    @ManyToOne(targetEntity = UserInfo.class, cascade = CascadeType.ALL)
     private UserInfo userInfo;
 
     private healthWarningLevel warningLevel;
@@ -47,6 +56,7 @@ public class RunningInformation {
         this.runningId = runningId;
     }
 
+    /*
     public String getUserName(){
         return this.userInfo == null?null:this.userInfo.getUserName();
     }
@@ -55,4 +65,8 @@ public class RunningInformation {
         return this.userInfo == null?null:this.userInfo.getAddress();
     }
 
+    public long getUserId(){
+        return this.userInfo == null?null:this.userInfo.getUserId();
+    }
+    */
 }
