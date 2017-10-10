@@ -48,7 +48,7 @@ Parameters page and size required. The response are sorted by the health warning
 would return 
 
 
-<image src = "https://user-images.githubusercontent.com/32628944/31413809-27807102-ade9-11e7-98ec-4af0adcda33c.png" alt="GitHub" title="Result of GET request" width="50" height="100" />
+<image src = "https://user-images.githubusercontent.com/32628944/31413809-27807102-ade9-11e7-98ec-4af0adcda33c.png" alt="GitHub" title="Result of GET request" width="400" height="500" />
 
 + **DELETE** (by runningId): on path localhost:8080/runningInfo/{runningId}
 
