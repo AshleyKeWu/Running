@@ -47,7 +47,7 @@ Parameters page and size required. The response are sorted by the health warning
 
 would return 
 
-???????????????
+![GitHub](https://user-images.githubusercontent.com/32628944/31413809-27807102-ade9-11e7-98ec-4af0adcda33c.png)
 
 + **DELETE** (by runningId): on path localhost:8080/runningInfo/{runningId}
 
