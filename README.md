@@ -43,11 +43,12 @@ Operation supported includes:
 
 Parameters page and size required. The response are sorted by the health warning level of each record. For example, GET request
 
-*localhost:8080/runningInfo/?page=0&size=10*
+*localhost:8080/runningInfo/?page=0&size=3*
 
 would return 
 
-![GitHub](https://user-images.githubusercontent.com/32628944/31413809-27807102-ade9-11e7-98ec-4af0adcda33c.png)
+
+<image src = "https://user-images.githubusercontent.com/32628944/31413809-27807102-ade9-11e7-98ec-4af0adcda33c.png" alt="GitHub" title="Result of GET request" width="50" height="100" />
 
 + **DELETE** (by runningId): on path localhost:8080/runningInfo/{runningId}
 
