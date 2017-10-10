@@ -18,7 +18,7 @@ This is a Java web application recording and analyzing the health situation of a
 
     $git clone https://github.com/AshleyKeWu/Running/edit/master/README.md
 
-Go into directory running-information-service-analysis/target. If there's no target directory, run ``$mvn clean install `` under running-information-service-analysis directory. After going into target directory, 
+Go into directory running-information-service-analysis/target. If there's no target directory, run ``$mvn clean install `` under running-information-service-analysis directory. After going into target directory, run command
 
     $java -jar running-information-analysis-service-1.0.0.BUILD-SNAPSHOT.jar
     
